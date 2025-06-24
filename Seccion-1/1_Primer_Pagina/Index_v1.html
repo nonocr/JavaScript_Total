@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <style>
+        body{
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="titulo-pagina" onmouseover="PonerTituloRojo()"
+        onmouseout="VolverNegro()"
+        >Bienvenido a JavaScript</h1>
+        <h2>El primer paso es el mas grande</h2>
+        <p>Esta pagina es muy sencilla</p>
+        <p>(pero tiene un secreto >>> Presiona F12)</p>
+    </div>
+    <script>
+        function PonerTituloRojo(){
+            document.getElementById("titulo-pagina").style = "color: red";
+        }
+        function VolverNegro(){
+            document.getElementById("titulo-pagina").style = "color: black";
+        }
+    </script>
+</body>
+</html>
