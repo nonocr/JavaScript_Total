@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Juego preguntas</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body onload="comenzarTiempo()">
+
+    <audio id="SonidoTiempo">
+        <source src="./gameover.mp3" type="audio/mpeg">
+    </audio>
+
+    <h2 id="h2">Responde las siguientes preguntas en menos de 30 segundos</h2>
+    <h2 id="Tiempo">30</h2>
+    <br>
+    <b>Cual es la capital de España?</b>
+    <br><br>
+    <input type="text" id="Respuesta1"> 
+    <br><br>
+    <b>Cual es el valor de Pi?</b>
+    <br><br>
+    <input type="text" id="Respuesta2">
+    <br><br>
+    <b>Cuantos planetas hay en el sistema solar?</b>
+    <br><br>
+    <input type="text" id="Respuesta3">
+    <br><br>
+    <b>Cuantos continentes hay en el mundo?</b>
+    <br><br>
+    <input type="text" id="Respuesta4">
+    <br><br>
+    <b>Cual es el pais mas pequeño del mundo?</b>
+    <br><br>
+    <input type="text" id="Respuesta5">
+    <br><br>
+
+    <button onclick="mostrarRespuestas()">Termine</button>
+    <button onclick="location.reload()">Intentar de nuevo</button>
+
+    <script>
+        let tiempoRestante = 30;
+        let intervalo;
+        let elementoTiempo = document.getElementById("Tiempo");
+        let elementoSonido = document.getElementById("SonidoTiempo");
+
+        function mostrarRespuestas(){
+            clearInterval(intervalo);
+            let respuestas = [
+                document.getElementById("Respuesta1").value,
+                document.getElementById("Respuesta2").value,
+                document.getElementById("Respuesta3").value,
+                document.getElementById("Respuesta4").value,
+                document.getElementById("Respuesta5").value
+            ]
+
+            let fechaActual = new Date();
+            alert(
+                "La fecha de hoy es " +
+                fechaActual.toLocaleDateString('es-ES') +
+                " y tus respuestas son:\n" +
+                respuestas.join("\n")
+            );
+        }
+        
+       function comenzarTiempo() {
+            intervalo = setInterval(function() {
+                tiempoRestante--;
+                elementoTiempo.textContent = tiempoRestante;
+                if (tiempoRestante <= 0) {
+                    clearInterval(intervalo);
+                    elementoTiempo.textContent = 0;
+                    alert("¡Game over!"), elementoSonido.play();
+                }
+            }, 1000);
+        }
+
+        
+    </script>
+
+</body>
+</html>
