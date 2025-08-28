@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practica Random 1</title>
+</head>
+<body>
+    <button onclick="crearAleatorio(10, 50)">Aleatorio</button>
+    <h2><span id="textoAleatorio">---</span></h2>
+
+    <script>
+        let elementoAleatorio = document.getElementById("textoAleatorio")
+
+        function crearAleatorio(inferior, superior) {
+            superior = superior + 1;
+            resultado = Math.floor(Math.random() * (superior - inferior) + inferior)
+            elementoAleatorio.textContent = resultado 
+        }
+    </script>
+</body>
+</html>

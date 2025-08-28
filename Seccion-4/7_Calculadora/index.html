@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora</title>
+</head>
+<body>
+    <center>
+        <h1>Calculadora</h1>
+
+        <input type="number" class="Containers" id="num1"> <input type="number" class="Containers" id="num2">
+
+        <br>
+        <br>
+
+        <button onclick="Suma()" style="width: 7%; height: 35px; border-radius: 5px; padding: 10px;">+</button>
+        <button onclick="Resta()" style="width: 7%; height: 35px; border-radius: 5px; padding: 10px;">-</button>
+        <button onclick="Multiplicacion()" style="width: 7%; height: 35px; border-radius: 5px; padding: 10px;">x</button>
+        <button onclick="Division()" style="width: 7%; height: 35px; border-radius: 5px; padding: 10px;">/</button>
+
+        <br>
+        <br>
+
+        <button onclick="Raiz()" style="width: 12%;height: 40px;padding: 7px;border-radius: 5px;padding: 10px;">Raiz</button>
+        <button onclick="Potencia()" style="width: 12%;height: 40px;padding: 7px;border-radius: 5px;padding: 10px;">Potencia</button>  
+
+        <br>    
+
+        <button onclick="Absoluto()" style="width: 12%;height: 40px;padding: 7px;border-radius: 5px;padding: 10px;"">Absoluto</button>
+        <button onclick="Random()" style="width: 12%;height: 40px;padding: 7px;border-radius: 5px;padding: 10px;">Random</button>
+
+        <br>
+
+        <h1>Resultado</h1>
+
+        <div id="Contenido">---</div>
+
+        <br>
+
+        <button onclick="RedondearCercano()" style="width: 12%;height: 40px;padding: 7px;border-radius: 5px;padding: 10px;" >Round</button>
+        <button onclick="RedondearAbajo()" style="width: 12%;height: 40px;padding: 7px;border-radius: 5px;padding: 10px;">Floor</button>
+        <button onclick="RedondearArriba()" style="width: 12%;height: 40px;padding: 7px;border-radius: 5px;padding: 10px;">Ceil</button>
+    </center>
+    <script src="script.js"></script>
+</body>
+</html>
