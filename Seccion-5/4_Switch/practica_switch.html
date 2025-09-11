@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Switch</title>
+</head>
+<body>
+    <h1>Escriba la fruta </h1>
+    <input type="text" id="fruta">
+
+    <h1>Evaluar parametro</h1>
+    <button onclick="consultarPrecio()">Evaluar</button>
+
+    <script>
+        function consultarPrecio() {
+    let elementoRespuesta = document.getElementById("fruta");
+    let fruta = elementoRespuesta.value;
+
+    switch (fruta){
+        case "Manzana":
+            alert("La manzana cuesta $15");
+            break;
+        case "Naranja":
+            alert("La naranja cuesta $25");
+            break;
+        case "Banana":
+            alert("La banana cuesta $20");
+            }
+}
+    </script>
+</body>
+</html>
