@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <title>Cine</title>
+    <meta charset="UTF-8">
+    <title>Recomendador de Películas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-    <center>
-    <h1>Bienvenidos al cine</h1>
-    <h4>--Menu--</h4>
-    <p>Queremos hacer de tu visit una experiencia mas placentera. <br>
-    Para eso ingresa tu edad y selecciona el genero que mas de guste, <br>
-    nosotros te recomendaremos una pelicula ideal.  </p>
-    </center>
+    <div class="container">
+        <h1>Recomendador de Películas</h1>
+        <form onsubmit="event.preventDefault(); Pelicula(document.getElementById('genero').value);">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" min="1" max="120" required>
+
+            <label for="genero">Género:</label>
+            <select id="genero" required>
+                <option value="" disabled selected>Selecciona un género</option>
+                <option value="Drama">Drama</option>
+                <option value="Comedia">Comedia</option>
+                <option value="Musical">Musical</option>
+                <option value="Crimen">Crimen</option>
+            </select>
+
+            <button type="submit">Recomendar</button>
+        </form>
+        <div id="recomendacion"></div>
     </div>
-
-    <p id="edad">Ingrese su edad:</p> 
-    <input type="number" id="inputEdad" min="1" max="120">
-    <br>
-    <button onclick="Pelicula('Drama')">Drama</button>
-    <button onclick="Pelicula('Comedia')">Comedia</button>
-    <button onclick="Pelicula('Musical')">Musical</button>
-    <button onclick="Pelicula('Crimen')">Crimen</button>
-
-    <p>Nuestra recomendacion:</p>
-    <h2 id="recomendacion"></h2>
-
     <script src="script.js"></script>
-
-
 </body>
 </html>
