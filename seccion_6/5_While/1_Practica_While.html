@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica While 1</title>
+</head>
+
+<body>
+    <script>
+        let Ventanilla = prompt("Cuantas vueltas quieres dar")
+        let vueltas = Number(Ventanilla);
+
+        function Vueltas(vueltas) {
+
+            let contador = 0;
+            while (contador < vueltas) {
+                console.log("El numero de vueltas dadas son: " + (contador + 1)); 
+                contador++;
+            }
+        }
+        Vueltas(vueltas)
+    </script>
+</body>
+
+</html>
