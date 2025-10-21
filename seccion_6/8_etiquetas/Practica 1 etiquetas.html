@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Practica Etiquetas</title>
+</head>
+<body>
+    <script>
+
+        let miArray = [
+            [2, 4, 5], 
+            [3, 0, 6], 
+            [9, 4, 7]
+        ];
+
+        function testLoop(){
+            for(let y = 0; y < miArray.length; y++){
+                for(let x = 0; x < miArray.length; x++){
+                    if(miArray[y][x] == 0){
+                        console.log("Hay un 0, siguiente numero:")
+                        continue
+                    }
+                    console.log(miArray[y][x])
+
+                }
+            }
+        }
+        testLoop(miArray)
+    </script>
+</body>
+</html>
